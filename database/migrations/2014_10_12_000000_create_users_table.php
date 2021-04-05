@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Query\Expression;
 use Illuminate\Support\Facades\Schema;
 
 class CreateUsersTable extends Migration
@@ -14,11 +15,14 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->id('user_id');
             $table->string('name');
+            $table->string('u_name')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->decimal('balance', 9, 2);
+            $table->decimal('unit', 11, 4);
             $table->rememberToken();
             $table->timestamps();
         });
