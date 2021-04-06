@@ -47,7 +47,7 @@ php artisan serve
 ```
 9. Sebelum memulai menggunakan api backendnya , insert data pada tabel NAB sebagai default apabila tidak ada nasabah seperti gambar di bawah ini 
 
-!(insertDefaultNAB)[/img/1.png]
+![insertDefaultNAB](/img/1.png)
 
 ### REST API Endpoint
 
