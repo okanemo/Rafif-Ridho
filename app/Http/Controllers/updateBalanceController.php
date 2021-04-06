@@ -104,7 +104,7 @@ class updateBalanceController extends Controller
             }
             
             $response = [
-                'message' => 'Top up balance successfull',
+                'message' => 'Withdraw balance successfull',
                 'current_balance' => 'Rp.'.round($user->balance, 2, PHP_ROUND_HALF_DOWN),
                 'current_unit' => round($user->unit, 4, PHP_ROUND_HALF_DOWN),
                 'current_nab' => NAB::orderBy('nab_id', 'DESC')->first()->nab
@@ -114,7 +114,7 @@ class updateBalanceController extends Controller
         }
         else{
             $response = [
-                'message' => 'Top up balance successfull',
+                'message' => 'Withdraw balance unsuccessfull',
                 'current_balance' => 'Rp.'.round($user->balance, 2, PHP_ROUND_HALF_DOWN),
                 'current_unit' => round($user->unit, 4, PHP_ROUND_HALF_DOWN),
                 'current_nab' => NAB::orderBy('nab_id', 'DESC')->first()->nab
